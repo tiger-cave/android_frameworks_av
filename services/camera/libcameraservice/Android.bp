@@ -39,6 +39,8 @@ cc_library_shared {
     name: "libcameraservice",
     defaults: [
         "needs_camera_boottime_defaults",
+        "qti_camera_device_defaults",
+        "no_cameraserver_defaults",
     ],
 
     // Camera service source
