@@ -75,6 +75,7 @@ cc_library_headers {
 
 cc_library {
     name: "libcamera_client",
+    defaults: ["camera_parameter_library_defaults"],
 
     aidl: {
         export_aidl_headers: true,
@@ -100,7 +101,6 @@ cc_library {
         "Camera.cpp",
         "CameraBase.cpp",
         "CameraMetadata.cpp",
-        "CameraParameters.cpp",
         "CameraParameters2.cpp",
         "CameraSessionStats.cpp",
         "CameraUtils.cpp",
@@ -182,6 +182,16 @@ cc_library_host_static {
         "include",
         "include/camera",
     ],
+}
+
+cc_library_static {
+    name: "libcamera_parameters",
+
+    export_include_dirs: [
+        "include",
+    ],
+    srcs: ["CameraParameters.cpp"],
+
 }
 
 // AIDL interface between camera clients and the camera service.
