@@ -328,4 +328,3 @@ Return<void> HidlCameraService::getCameraVendorTagSections(getCameraVendorTagSec
 } // cameraservice
 } // frameworks
 } // android
-
